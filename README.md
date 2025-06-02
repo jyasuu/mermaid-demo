@@ -329,3 +329,16 @@ timeline
                   : The first metal objects are made in Britain.Some other nice things happen. it is a good time to be alive.
 
 ```
+
+## ZenUML
+```mermaid
+zenuml
+    try {
+      Consumer->API: Book something
+      API->BookingService: Start booking process
+    } catch {
+      API->Consumer: show failure
+    } finally {
+      API->BookingService: rollback status
+    }
+```
