@@ -34,6 +34,55 @@ sequenceDiagram
     end
 ```
 
+## Class
+
+https://github.com/mermaid-js/mermaid/blob/develop/docs/syntax/classDiagram.md#visibility
+https://github.com/mermaid-js/mermaid/blob/develop/docs/syntax/classDiagram.md#defining-relationship
+https://github.com/mermaid-js/mermaid/blob/develop/docs/syntax/classDiagram.md#annotations-on-classes
+
+```mermaid
+classDiagram
+classA --|> classB : Inheritance
+classC --* classD : Composition
+classE --o classF : Aggregation
+classG --> classH : Association
+classI -- classJ : Link(Solid)
+classK ..> classL : Dependency
+classM ..|> classN : Realization
+classO .. classP : Link(Dashed)
+
+```
+
+```mermaid
+---
+title: Animal example
+---
+classDiagram
+    note "From Duck till Zebra"
+    Animal <|-- Duck
+    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -int sizeInFeet
+        -canEat()
+    }
+    class Zebra{
+        +bool is_wild
+        +run()
+    }
+
+```
+
 ## Mindmaps
 ```mermaid
 mindmap
